@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     paddingTop: sizes.md,
     color: colours.green,
-    letterSpacing: -5,
+    letterSpacing: -6,
   },
 });
 
