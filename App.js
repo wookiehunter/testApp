@@ -18,17 +18,19 @@ import {
   View,
 } from 'react-native';
 
+import {Intro} from './src/features/intro';
+
 import {colours} from './src/utils/colours.js';
+import {sizes} from './src/utils/sizes.js';
 
 const App: () => Node = () => {
-  const isDarkMode = useColorScheme() === 'dark';
-
   return (
     <SafeAreaView>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
+      <StatusBar style={styles.container} />
       <ScrollView contentInsetAdjustmentBehavior="automatic">
         <View>
           <Text style={styles.title}>Test App</Text>
+          <Intro />
         </View>
       </ScrollView>
     </SafeAreaView>
@@ -36,17 +38,17 @@ const App: () => Node = () => {
 };
 
 const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
+  container: {
+    flex: 1,
+    paddingTop: sizes.md,
   },
   title: {
-    fontSize: 48,
-    fontWeight: '600',
+    fontSize: sizes.xxl,
+    fontWeight: '900',
     textAlign: 'center',
-    paddingTop: 25,
+    paddingTop: sizes.md,
     color: colours.green,
-    letterSpacing: -2,
+    letterSpacing: -5,
   },
 });
 
