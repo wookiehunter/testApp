@@ -14,7 +14,7 @@ export const Truth = () => {
         onChangeText={text => setTruth(text)}
       />
       <View style={styles.outputContainer}>
-        {truth && truth.length > 3 ? (
+        {truth && truth.length > 0 ? (
           <Text style={styles.output}>Your truth is: {truth}</Text>
         ) : (
           <Text style={styles.lies}>Lies, lies and more damn lies!!!</Text>
