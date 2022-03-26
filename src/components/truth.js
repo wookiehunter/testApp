@@ -14,7 +14,11 @@ export const Truth = () => {
         onChangeText={text => setTruth(text)}
       />
       <View style={styles.outputContainer}>
-        {truth ? <Text>{truth}</Text> : null}
+        {truth && truth.length > 3 ? (
+          <Text style={styles.output}>Your truth is: {truth}</Text>
+        ) : (
+          <Text style={styles.lies}>Lies, lies and more damn lies!!!</Text>
+        )}
       </View>
     </View>
   );
@@ -30,11 +34,24 @@ const styles = StyleSheet.create({
     height: 50,
     width: 300,
     padding: 15,
+    color: colours.green,
     borderColor: colours.orange,
     borderWidth: 2,
   },
   outputContainer: {
     height: sizes.xxxl,
     justifyContent: 'center',
+  },
+  output: {
+    height: 50,
+    width: 300,
+    padding: 15,
+    color: colours.orange,
+    borderColor: colours.green,
+    borderWidth: 2,
+  },
+  lies: {
+    color: colours.red,
+    fontSize: sizes.lg,
   },
 });
