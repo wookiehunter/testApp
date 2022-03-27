@@ -17,7 +17,7 @@ import {
   useColorScheme,
   View,
 } from 'react-native';
-import {Divider} from 'react-native-paper';
+import {Divider, Title} from 'react-native-paper';
 
 import {Intro} from './src/features/intro';
 
@@ -30,8 +30,8 @@ const App: () => Node = () => {
       <StatusBar style={styles.container} />
       <ScrollView contentInsetAdjustmentBehavior="automatic">
         <View>
-          <Text style={styles.title}>Test App</Text>
-          <Divider inset="false" />
+          <Title style={styles.title}>Test App</Title>
+          <Divider style={styles.divider} />
           <Intro />
         </View>
       </ScrollView>
@@ -48,10 +48,15 @@ const styles = StyleSheet.create({
     fontSize: sizes.xxl,
     fontWeight: '900',
     textAlign: 'center',
-    paddingTop: sizes.md,
+    paddingTop: sizes.lg,
     paddingBottom: sizes.md,
     color: colours.green,
     letterSpacing: -6,
+  },
+  divider: {
+    backgroundColor: colours.green,
+    height: 1,
+    opacity: 0.25,
   },
 });
 

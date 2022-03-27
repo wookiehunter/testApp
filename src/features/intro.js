@@ -1,5 +1,6 @@
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {View, StyleSheet} from 'react-native';
+import {Subheading} from 'react-native-paper';
 import {Truth} from '../components/truth.js';
 import {Typewriter} from '../components/typewriter.js';
 import {colours} from '../utils/colours.js';
@@ -8,7 +9,9 @@ import {sizes} from '../utils/sizes.js';
 export const Intro = () => (
   <>
     <View style={styles.container}>
-      <Text style={styles.text}>Hello! is it me you're looking for...?'</Text>
+      <Subheading style={styles.text}>
+        Hello! is it me you're looking for...?'
+      </Subheading>
     </View>
     <Truth />
     <Typewriter />
